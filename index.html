@@ -10,20 +10,22 @@
 </head>
 
 <body>
-    <form class="hidden" id='login-form'>
-        <input type="text" placeholder="What is your name?" required maxlength="15">
-        <input type="submit" value="Log In"></input>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do">
-    </form>
-    <ul id="todo-list" type=none></ul>
-
+    <div class="hidden" id='login-form'>
+        <form>
+            <input type="text" placeholder="What is your name?" required maxlength="15">
+        </form>
+    </div>
+    <main class="hidden">
+        <h2 id="clock">00:00:00</h2>
+        <h1 id="greeting"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do">
+        </form>
+        <ul id="todo-list" type=none></ul>
+    </main>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/background.js"></script>
+    <!-- <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
 </body>
 

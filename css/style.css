@@ -1,12 +1,40 @@
+@import "reset.css";
+@import "login-form.css";
+
 .hidden {
   display: none;
 }
 
-#bgimg {
+body {
+  font-family: monospace;
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form input {
+  width: 33vw;
+  height: 10vh;
+  border: none;
+  border-bottom: #dfe4ea solid 1px;
+  font-size: 150%;
+  text-align: center;
+  background-color: whitesmoke;
+  transition: linear 0.5s border-color;
+}
+
+#login-form input:focus {
+  border-color: #2f3542;
+}
+
+/* #bgimg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -1;
-}
+} */
