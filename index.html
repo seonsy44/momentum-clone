@@ -16,12 +16,16 @@
         </form>
     </div>
     <main class="hidden">
-        <h2 id="clock">00:00:00</h2>
-        <h1 id="greeting"></h1>
-        <form id="todo-form">
-            <input type="text" placeholder="Write a To Do">
-        </form>
-        <ul id="todo-list" type=none></ul>
+        <div class="main__fix">
+            <div id="clock">00:00:00</div>
+            <div id="greeting"></div>
+        </div>
+        <div class="todo">
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do">
+            </form>
+            <ul id="todo-list" type=none></ul>
+        </div>
     </main>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>

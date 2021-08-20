@@ -1,20 +1,29 @@
 @import "reset.css";
 @import "login-form.css";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 .hidden {
   display: none;
 }
 
 body {
-  font-family: monospace;
+  font-family: Pretendard-Regular;
   background-color: whitesmoke;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #2f3542;
 }
 
+/* 로그인창*/
 #login-form input {
   width: 33vw;
   height: 10vh;
@@ -28,6 +37,60 @@ body {
 
 #login-form input:focus {
   border-color: #2f3542;
+}
+
+/*메인창*/
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*메인창 왼쪽*/
+.main__fix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#clock {
+  font-size: 600%;
+  margin-top: 20%;
+}
+#greeting {
+  font-size: 400%;
+  margin-top: 10%;
+}
+
+/*메인창 오른쪽*/
+.todo {
+  padding: 20% 10%;
+}
+#todo-form input {
+  background-color: whitesmoke;
+  border: none;
+  border-bottom: #dfe4ea 1px solid;
+  width: 80%;
+  height: 8vh;
+  font-size: 150%;
+  text-align: center;
+  transition: linear 0.5s border-color;
+}
+#todo-form input:focus {
+  border-color: #2f3542;
+}
+#todo-list li {
+  margin: 5% 10%;
+  font-size: 120%;
+}
+#todo-list li span:last-child {
+  margin-left: 5%;
+  color: #a4b0be;
+}
+#todo-list li span:last-child:hover {
+  cursor: pointer;
+  color: #2f3542;
 }
 
 /* #bgimg {
