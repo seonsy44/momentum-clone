@@ -10,6 +10,28 @@ function saveToDos(){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function checkToDo(event) {
+    const checkBtn = event.target;
+    const btnText = checkBtn.innerText
+    if (btnText == '○'){
+        checkBtn.innerText = '●';
+    } else {
+        checkBtn.innerText = '○'
+    }
+}
+
+function changeColor(event) {
+    const todoText = event.target;
+    const todoTextClass = todoText.className;
+    if (todoTextClass=='') {
+        todoText.className = 'blue';
+    } else if (todoTextClass=='blue') {
+        todoText.className = 'red';
+    } else {
+        todoText.className = '';
+    }
+}
+
 function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
@@ -20,13 +42,18 @@ function deleteToDo(event) {
 function paintToDo(newToDo){
     const li = document.createElement('li');
     li.id = newToDo.id
-    const span = document.createElement('span');
-    span.innerText = '⊹ ' + newToDo.text;
-    const btn = document.createElement('span');
-    btn.innerText = '×';
-    btn.addEventListener('click', deleteToDo);
-    li.appendChild(span);
-    li.appendChild(btn);
+    const checkBtn = document.createElement('span');
+    checkBtn.innerText = '○';
+    checkBtn.addEventListener('click', checkToDo);
+    const todoText = document.createElement('span');
+    todoText.innerText = newToDo.text;
+    todoText.addEventListener('click', changeColor);
+    const deleteBtn = document.createElement('span');
+    deleteBtn.innerText = '×';
+    deleteBtn.addEventListener('click', deleteToDo);
+    li.appendChild(checkBtn);
+    li.appendChild(todoText);
+    li.appendChild(deleteBtn);
     toDoList.appendChild(li);
 }
 

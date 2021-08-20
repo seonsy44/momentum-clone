@@ -1,19 +1,18 @@
 @import "reset.css";
 @import "login-form.css";
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+  font-family: "NEXON Lv2 Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff")
     format("woff");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
-
 .hidden {
   display: none;
 }
 
 body {
-  font-family: Pretendard-Regular;
+  font-family: NEXON Lv2 Gothic;
   background-color: whitesmoke;
   height: 100vh;
   display: flex;
@@ -59,7 +58,7 @@ main {
   margin-top: 20%;
 }
 #greeting {
-  font-size: 400%;
+  font-size: 300%;
   margin-top: 10%;
 }
 
@@ -80,9 +79,25 @@ main {
 #todo-form input:focus {
   border-color: #2f3542;
 }
+.blue {
+  color: #778beb;
+}
+.red {
+  color: #ea8685;
+}
 #todo-list li {
-  margin: 5% 10%;
+  display: flex;
+  align-items: center;
+  margin: 4% 10%;
   font-size: 120%;
+}
+#todo-list li span:first-child {
+  font-size: 140%;
+  margin-right: 3%;
+}
+#todo-list li span:first-child:hover,
+#todo-list li span:nth-child(2):hover {
+  cursor: pointer;
 }
 #todo-list li span:last-child {
   margin-left: 5%;
